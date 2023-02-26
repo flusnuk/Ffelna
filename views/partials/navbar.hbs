@@ -1,0 +1,118 @@
+{{!-- <nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Магазин вещей</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isHome}}
+        <li class="active"><a href="/">Главная</a></li>
+      {{else}}
+        <li><a href="/">Главная</a></li>
+      {{/if}}
+
+      {{#if isCourses}}
+        <li class="active"><a href="/courses">Категории</a></li>
+      {{else}}
+        <li><a href="/courses">Категории</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+        {{#if isAdd}}
+          <li class="active"><a href="/add">Добавить вещь</a></li>
+        {{else}}
+          <li><a href="/add">Добавить вещь</a></li>
+        {{/if}} 
+
+        {{#if isCard}}
+          <li class="active"><a href="/card">Корзина</a></li>
+        {{else}}
+          <li><a href="/card">Корзина</a></li>
+        {{/if}} 
+
+        {{#if isOrder}}
+          <li class="active"><a href="/orders">Заказы</a></li>
+        {{else}}
+          <li><a href="/orders">Заказы</a></li>
+        {{/if}} 
+
+        <li><a href="/auth/logout">Выйти</a></li>
+      {{else}}
+        {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Войти</a></li>
+        {{else}}
+          <li><a href="/auth/login#login">Войти</a></li>
+        {{/if}} 
+      {{/if}}
+    </ul>
+  </div>
+</nav> --}}
+
+<div class="header__container">
+  <div class="background-darkened">
+    <nav class="nav">
+      <div class="nav__container container">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav__logo-container">
+          <a href="/"><img src="" alt="logo"></a>
+        </div>
+        <div class="card-mobile">
+          {{#if isCard}}
+          <li class="active card2"><a href="/card"><img src="https://cdn-icons-png.flaticon.com/512/743/743131.png"
+                alt=""></a>
+          </li>
+          {{else}}
+          <li class="card2"><a href="/card"><img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt=""></a>
+          </li>
+          {{/if}}
+
+        </div>
+        <div class="links__container burger__links">
+          <div class="header__text-links">
+            {{#if isHome}}
+            <li class="active"><a href="/">Главная</a></li>
+            {{else}}
+            <li><a href="/">Главная</a></li>
+            {{/if}}
+            
+            {{#if isCourses}}
+            <li class="active"><a href="/courses">Категории</a></li>
+            {{else}}
+            <li><a href="/courses">Категории</a></li>
+            {{/if}}
+            
+            {{#if isAuth}}
+            {{#if isAdd}}
+            <li class="active"><a href="/add">Добавить вещь</a></li>
+            {{else}}
+            <li><a href="/add">Добавить вещь</a></li>
+            {{/if}}
+            
+            {{#if isCard}}
+            <li class="active"><a href="/card">Корзина</a></li>
+            {{else}}
+            <li><a href="/card">Корзина</a></li>
+            {{/if}}
+            
+            {{#if isOrder}}
+            <li class="active"><a href="/orders">Заказы</a></li>
+            {{else}}
+            <li><a href="/orders">Заказы</a></li>
+            {{/if}}
+            
+            <li><a href="/auth/logout">Выйти</a></li>
+            {{else}}
+            {{#if isLogin}}
+            <li class="active"><a href="/auth/login#login">Войти</a></li>
+            {{else}}
+            <li><a href="/auth/login#login">Войти</a></li>
+            {{/if}}
+            {{/if}}
+        </div>
+      </div>
+  </div>
+  </nav>
+</div>
+</div>

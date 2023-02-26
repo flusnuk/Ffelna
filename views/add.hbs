@@ -1,0 +1,41 @@
+{{!-- <h1 class="addItem">Добавить Вещь</h1>
+
+<form action="/add" method="POST">
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required>
+    <label for="title">Название вещи</label>
+    <span class="helper-text" data-error="Введите название"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" required min="1">
+    <label for="price">Цена вещи</label>
+    <span class="helper-text" data-error="Введите цену"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="img" name="img" type="text" class="validate" required>
+    <label for="img">URL картинки</label>
+    <span class="helper-text" data-error="Введите url картинки"></span>
+  </div>
+
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+
+  <button class="btn btn-primary">Добавить вещь</button>
+</form> --}}
+
+<form action="/add" method="POST">
+  <div class="contact__form">
+    <h1 class="addItem">Добавить Вещь</h1>
+    <div class="contact-main__section">
+        <input type="text" class="contact__inputs validate"  name = "title"id="title" placeholder="Enter item name*" required>
+
+        <input type="number" name="price" class="contact__inputs validate" id="price" placeholder="Enter price*" required min="1">
+
+        <input type="text" name="img"  class="contact__inputs validate" id="img" placeholder="Enter URL*" required>
+
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <button class="btn btn-primary contact__btn contact-btn-send">Добавить вещь</button>
+      </form>
+    </div>
+</form>
