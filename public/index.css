@@ -1,7 +1,10 @@
 @import url(catalog.css);
 @import url(navbar.css);
 @import url(add.css);
+@import url(catalog-prod.css);
+@import url(item.css);
 @import url(login.css);
+@import url(footer.css);
 
 * {
   margin: 0;
@@ -12,7 +15,7 @@ body {
   background-color: #ffffff;
 }
 nav{
-      background-color: white
+      background-color: #1c1c1b
 }
 /* .nav-wrapper {
   padding: 0 2rem;

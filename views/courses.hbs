@@ -1,4 +1,4 @@
-<h1>Вещи</h1>
+{{!-- <h1>Вещи</h1>
 
 {{#if courses.length}}
 {{#each courses}}
@@ -30,19 +30,63 @@
 {{else}}
 <p>Курсов пока нет</p>
 {{/if}}
+ --}}
+    <p class="category-name">Категория</p>
+{{!-- {{#if courses.length}}
+{{#each courses}}
+<div class="product-item">
+  <div class="product-item-content">
+    <div class="img-wrapper">
+        <a href="/courses/{{id}}" ><img src="{{img}}" alt="{{title}}"></a>
+    </div>
+    <div class="product-info-wrap">
+      <div class="product-info">
+        <div class="product-name"><span class="card-title">{{title}}</span></div>
+        <div class="product-price">{{price}} &#x20bd;</div>
+      </div>
+      <div class="product-info-hover"></div>
+    </div>
 
+  </div>
+</div>
+{{/each}}
+{{/if}} --}}
+
+
+<div class="products-grid">
+{{#if courses.length}}
+{{#each courses}}
+<div class="product">
+  <div class="product-image">
+      <a href="/courses/{{id}}"><img src="{{img}}" alt="{{title}}">
+    <img
+      src="https://media2.symbol.ua/aio-images/2d/df/2ddf6132eed69aa3cad603524d21038a/d958d513-cb68-4f33-b082-631d9f22be20.jpg"
+      alt="Product 1" class="hover-image">
+      </a>
+  </div>
+  <div class="product-info">
+    <h2 class="product-name">{{title}}</h2>
+    <div class="product-details">
+      <span class="product-size">Size: S, M, L, XL</span>
+      <span class="product-price">{{price}} &#x20bd;</span>
+    </div>
+  </div>
+</div>
+{{/each}}
+{{/if}}
+</div>
 {{!-- <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img src="https://ostriv.ua/media/app/creative/cache/2/file/1100x/925f46717e92fbc24a8e2d03b22927e1/1/_/1_1_4.jpg"
       class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
 
-    <img src="https://ostriv.ua/media/app/creative/cache/2/file/1100x/925f46717e92fbc24a8e2d03b22927e1/2/_/2_1_3.jpg" class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape" />
+    <img src="https://ostriv.ua/media/app/creative/cache/2/file/1100x/925f46717e92fbc24a8e2d03b22927e1/2/_/2_1_3.jpg"
+      class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
-    <img src="https://ostriv.ua/media/app/creative/cache/2/file/1100x/925f46717e92fbc24a8e2d03b22927e1/3/_/3_1_3.jpg" class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds" />
+    <img src="https://ostriv.ua/media/app/creative/cache/2/file/1100x/925f46717e92fbc24a8e2d03b22927e1/3/_/3_1_3.jpg"
+      class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
 
     <img src="https://ostriv.ua/media/app/creative/cache/2/file/1100x/925f46717e92fbc24a8e2d03b22927e1/4/_/4_1_.jpg"
       class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />

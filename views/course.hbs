@@ -1,7 +1,105 @@
-<div class="course">
-  <h1>{{course.title}}</h1>
-
+{{!-- <div class="item-solo">
   <img src="{{course.img}}" alt="{{course.title}}">
+  <p class="item-name">{{course.title}}</h1>
+  <p class="price-item price big">{{course.price}}</p>
+</div> --}}
+<div class="item-solo">
+  <div class="main-item">
+    <div class="main-section">
+      <div class="item-image">
+        <img id="main-image"
+          src="{{course.img}}"
+          alt="{{course.title}}">
+      </div>
+      <div class="product-thumbnails main-thumb">
+        <div class="product-thumbnail">
+          <img
+            src="https://media2.symbol.ua/aio-images/2d/df/2ddf6132eed69aa3cad603524d21038a/d958d513-cb68-4f33-b082-631d9f22be20.jpg?_ga=2.70475792.1247935750.1677777963-558957583.1677603923&_gac=1.56972760.1677779728.Cj0KCQiA6fafBhC1ARIsAIJjL8kzn53X2J1Ly2RJ22o9sCXSaorPxUGvHoTmW9HURzV15zfckTIuOMUaAvh-EALw_wcB"
+            alt="VETEMENT   Jacket Thumbnail 1">
+        </div>
+        <div class="product-thumbnail">
+          <img
+            src="https://media2.symbol.ua/aio-images/jn/ab/adab79889fca0a99a37eea1375cf2a40/e9923bf5-bc02-4240-bdcb-1ba20847eb04.jpg?_ga=2.70475792.1247935750.1677777963-558957583.1677603923&_gac=1.56972760.1677779728.Cj0KCQiA6fafBhC1ARIsAIJjL8kzn53X2J1Ly2RJ22o9sCXSaorPxUGvHoTmW9HURzV15zfckTIuOMUaAvh-EALw_wcB">
+        </div>
+        <div class="product-thumbnail">
+          <img
+            src="https://media2.symbol.ua/aio-images/90/35/90350b9f0c46d98d58701b763cc275e3/7e1c3253-2d27-4305-b5b2-12afd8595b48.jpg?_ga=2.70475792.1247935750.1677777963-558957583.1677603923&_gac=1.56972760.1677779728.Cj0KCQiA6fafBhC1ARIsAIJjL8kzn53X2J1Ly2RJ22o9sCXSaorPxUGvHoTmW9HURzV15zfckTIuOMUaAvh-EALw_wcB">
+        </div>
+      </div>
+    </div>
+    <div class="item-details">
+      <div class="det-div">
+        <h1 class="item-title">{{course.title}}</h1>
+        <div class="item-price">{{course.price}}&#x20bd;</div>
+        <hr class="linia">
+        <div class="charac">
+          <p>Категория: Худи{{course.category}}</p>
+          <p>Цвет: черный{{course.color}}</p>
+        </div>
+        <p class="item-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima voluptas maxime, molestiae voluptates
+          voluptate at expedita nobis eveniet earum voluptatem itaque? Architecto nam recusandae omnis sapiente dolores
+          optio cum at.{{course.desc}}</p>
+        <nav class="item-sizes">
+          <a href="#" class="prod-sizes">
+            XS
+          </a><a href="#" class="prod-sizes">
+            S
+          </a>
+          <a href="#" class="prod-sizes">
+            XL
+          </a>
+        </nav>
 
-  <p class="price big">{{course.price}}</p>
+      </div>
+      <div class="btn-div">
+
+        <button class="product-add-to-cart">В наличии</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="tabs">
+    <div class="tab-2">
+      <label for="tab2-1">Описание</label>
+      <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+      <div>
+        <h4>Tab One</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat id velit quis vestibulum. Nam id
+          orci eu urna mollis porttitor. Nunc nisi ante, gravida at velit eu, aliquet sodales dui. Sed laoreet
+          condimentum
+          nisi a egestas. <a class="documentation"
+            href="https://flkt.mx/pitaya/componentes.html#pestanias">Documentación
+            en español</a>.</p>
+        <p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius.
+          Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus
+          efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum
+          primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc, finibus posuere
+          lorem. Suspendisse consectetur volutpat est ut ornare.</p>
+      </div>
+    </div>
+    <div class="tab-2">
+      <label for="tab2-2">Характеристики</label>
+      <input id="tab2-2" name="tabs-two" type="radio">
+      <div>
+        <h4>Tab Two</h4>
+        <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non
+          tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class
+          aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget
+          risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    const mainImage = document.querySelector('#main-image');
+    const thumbnails = document.querySelectorAll('.product-thumbnail');
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        mainImage.src = thumbnail.querySelector('img').src;
+      });
+    });
+  </script>
+
 </div>

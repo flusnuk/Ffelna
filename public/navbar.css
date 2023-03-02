@@ -6,7 +6,7 @@
     z-index: 5;
     padding-top: 5px;
 }
-.nav{
+.nav-header{
         list-style-type: none;
         
 }
@@ -16,13 +16,15 @@
 
 
 .nav__container {
+    max-width: 1800px;
     padding: 0 24px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     /* padding: 20px 0; */
     padding-bottom: 10px;
     /* margin-top: 10px; */
+
 
 }
 
@@ -31,6 +33,7 @@
     height: 56px;
     width: 174px;
     z-index: 10;
+    margin: auto;
 }
 
 .nav__logo-container>a>img {
@@ -52,7 +55,7 @@
 }
 
 .burger span {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(216, 216, 216);
     width: 24px;
     display: block;
     transition: all 0.5s;
@@ -171,6 +174,7 @@
 
     .nav__logo-container img {
         padding-left: 0px;
+        margin-left: 180px;
     }
 }
 
