@@ -1,0 +1,16 @@
+#contacts {
+    background-color: #d4d2d0;
+    font-family: "Signika Negative", sans-serif;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.mini-heading{
+    font-size: 22px;
+    padding: 8px 0px 8px 0px;
+}
+.contacts-info{
+    padding: 7px 0px 5px 0px;
+}
+.heading-answer{
+    padding: 7px 0px 7px 0px;
+}

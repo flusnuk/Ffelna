@@ -1,7 +1,10 @@
 .heading__theme {
     background-image: url(https://i.ytimg.com/vi/1u6OovE0cY4/maxresdefault.jpg);
-    background-size: cover;
     height: 880px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

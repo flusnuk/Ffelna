@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,700&display=swap');
+
+#about {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f3f3d7;
+
+}
+.about__text p {
+    font-family: 'Fira Sans', sans-serif;
+    color: #8f4a15;
+}
+.subheader{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: rgb(233, 85, 154);
+    font-family: 'Russo One', sans-serif;
+}
+.about__title{
+    padding-bottom: 5px;
+    color: #e27e36;
+}
+#about>div.about__image>img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: -40px;
+}
+
+#about>div.about__info {
+    background-color: var(--background-color);
+    padding: 60px 30px;
+}
+
+#about>div.about__info h2 {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#about>div.about__info>img {
+    margin-top: 35px;
+}
+
+#about>div.about__info>div.about__text p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#about>div.about__info .about__info-slider-imgs div>img {
+    width: 100%;
+}
+
+#about>div.about__info .about__info-slider-imgs {
+    min-height: 550px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 25px;
+
+}
+
+#about>div.about__info .about__slider-dots {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#about>div.about__info span.slider-dot {
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    background-color: #e9c0bd;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+
+@media (min-width: 768px) {
+
+    #about {
+        flex-direction: row;
+    }
+
+    #about>div.about__info .about__info-slider-imgs {
+        min-height: 225px;
+    }
+
+    #about>div.about__info .about__info-slider-imgs div>img {
+        max-width: 225px;
+    }
+
+    #about>div.about__image,
+    #about>div.about__info {
+        width: 50%;
+    }
+
+    #about>div.about__image>img {
+        display: block;
+        object-fit: cover;
+        height: 100%;
+    }
+}

@@ -3,10 +3,12 @@
 @import url(heading.css);
 @import url(numbers.css);
 @import url(navbar.css);
+@import url(about-us.css);
 @import url(add.css);
 @import url(catalog-prod.css);
 @import url(item.css);
 @import url(login.css);
+@import url(contacts.css);
 @import url(footer.css);
 
 * {
