@@ -1,0 +1,36 @@
+.heading__theme {
+    background-image: url(https://i.ytimg.com/vi/1u6OovE0cY4/maxresdefault.jpg);
+    background-size: cover;
+    height: 880px;
+}
+
+
+
+@media (min-width:768px) {
+    .heading__theme {
+        padding: 190px 0;
+    }
+
+    .heading__container {
+        padding: 0 36px;
+    }
+
+    .header__big {
+        font-size: 70px;
+    }
+}
+
+@media (min-width:922px) {
+
+    .heading__container {
+        padding: 0 40px;
+    }
+
+    .heading {
+        padding: 0 40px;
+    }
+
+    .header__big {
+        font-size: 100px;
+    }
+}

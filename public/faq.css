@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+.faq-subheading{
+    font-family: 'Climate Crisis', cursive;
+    font-size: 15px;
+    color: orange;
+    padding-top: 10px;
+}
+
+.section-description {
+    color: gray;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 9px;
+}
+
+.section-heading {
+    color: #8D4004;
+    font-size: 0.9rem;
+    font-weight: 900;
+    font-style: bold;
+    font-family: 'Signika Negative', sans-serif;
+    padding-top: 10px;
+}
+
+.main__faq {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #e7e7e7;
+    padding: 55px 24px;
+}
+
+.faq-line {
+    background-color: orange;
+}
+
+.faq__image-container {
+    display: block;
+    width: 100%;
+}
+
+.faq-image {
+    display: block;
+    width: 100%;
+}
+
+.faq__text {
+    width: 100%;
+    padding: 0;
+}
+
+.faq__text-accordion {
+    margin-top: 25px;
+}
+
+.accordion-container {
+    padding: 20px 0;
+}
+
+.accordion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: margin-bottom 0.3s linear;
+}
+
+.faq-plus-icon,
+.faq-minus-icon {
+    min-width: 15px;
+    margin-left: 20px;
+}
+
+.faq-minus-icon {
+    display: none;
+}
+
+.accordion-label.is-open .faq-plus-icon {
+    display: none;
+}
+
+.accordion-label.is-open .faq-minus-icon {
+    display: flex;
+}
+
+.accordion-label.is-open {
+    margin-bottom: 25px;
+}
+
+.accordion-label-heading {
+    color: #ED7014;
+    font-family: "Signika Negative", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+}
+
+.accordion-description {
+    color: rgb(68, 67, 67);
+    font-size: 16px;
+    line-height: 27.2px;
+    font-weight: 400;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.faq-hr {
+    margin: 0;
+}
+
+
+@media (min-width: 768px) {
+    .section-heading{
+        padding: 0px;
+    }
+    .main__faq {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 55px 0px 200px 0px;
+    }
+
+    .faq__image-container {
+        position: relative;
+        max-width: 600px;
+        padding: 0 15px;
+        margin: 0 0 auto auto;
+    }
+
+    .faq-image {
+        position: absolute;
+        display: block;
+        max-width: 570px;
+        max-height: 557px;
+        object-fit: cover;
+        object-position: 51.754% 57.685%;
+    }
+
+    .faq-subheading {
+        margin-top: 30px;
+        padding: 0px;
+    }
+
+    .faq__text {
+        padding: 0 15px;
+        max-width: 600px;
+    }
+
+    .accordion-label-heading {
+        font-size: 22px;
+        line-height: 30.8px;
+    }
+}
+

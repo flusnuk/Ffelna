@@ -30,7 +30,7 @@ if ($card) {
     if (event.target.classList.contains('js-remove')) {
       const id = event.target.dataset.id
       const csrf = event.target.dataset.csrf
-      
+
       fetch('/card/remove/' + id, {
         method: 'delete',
         headers: {
@@ -57,9 +57,9 @@ if ($card) {
           }
         })
     }
-    
+
   })
-} 
+}
 
 
 (function () {
@@ -78,4 +78,27 @@ if ($card) {
   });
 })();
 
-M.Tabs.init(document.querySelectorAll('.tabs'))
+(function () {
+  const accordions = document.querySelectorAll(".accordion-label");
+
+  for (let i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener('click', function () {
+
+      const content = this.nextElementSibling;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        this.classList.remove("is-open");
+      } else {
+        let active = document.querySelectorAll(".accordion-label.is-open");
+        for (let j = 0; j < active.length; j++) {
+          active[j].classList.remove("is-open");
+          active[j].nextElementSibling.style.maxHeight = null;
+        }
+        this.classList.toggle("is-open");
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    })
+  }
+})();
+// M.Tabs.init(document.querySelectorAll('.tabs'))

@@ -37,7 +37,7 @@
 }
 
 .nav__logo-container>a>img {
-    height: 100%;
+    height: 117%;
     width: 80%;
 }
 
@@ -51,11 +51,12 @@
     width: 24px;
     height: 26px;
     margin-right: 12px;
+    padding-top: 5px;
 
 }
 
 .burger span {
-    border-bottom: 2px solid rgb(216, 216, 216);
+    border-bottom: 2px solid rgba(245, 160, 50, 0.925);
     width: 24px;
     display: block;
     transition: all 0.5s;
@@ -64,6 +65,7 @@
 .burger span:nth-child(1) {
     position: relative;
     top: 18px;
+        width: 15px;
 }
 
 .burger span:nth-child(3) {
@@ -106,7 +108,7 @@
         top: 0;
         left: 0;
         text-align: center;
-        background-color: var(--background-contact-color);
+        background-color: white;
         padding-top: 95px;
         transform: translateX(-100%);
         transition: transform 0.5s;
@@ -120,12 +122,12 @@
 
 .header__text-links a {
     display: block;
-    font-size: 16px;
+    font-size: 21px;
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    color: var(--text-color);
     margin: 10px 5px;
+    color: #141414;
 }
 
 .header__text-links a:hover {

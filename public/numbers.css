@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
+
+.numbers__conteiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0 55px 0;
+    background-color: #d4d2d0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    flex: 1;
+    justify-content: space-around;
+    box-sizing: border-box;
+    font-family: "Signika Negative", sans-serif;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+}
+
+.number {
+    color: #eb6d2f;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.line__number {
+    height: 4px;
+    width: 20%;
+    background-color: rgb(236, 127, 55);
+}
+
+.text__number {
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    color: #8D4004;;
+    font-size: inherit;
+}
+
+
+.numbers__conteiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0 55px 0;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+}
+
+@media (min-width: 920px) {
+    .numbers__conteiner {
+        background-color: #d4d2d0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        flex: 1;
+        padding: 50px 0 55px 0;
+        justify-content: space-around;
+        box-sizing: border-box;
+        font-family: "Signika Negative",
+            sans-serif;;
+    }
+
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px 0 15px;
+    }
+
+    .number {
+        color: #eb6d2f;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .line__number {
+        height: 4px;
+        width: 20%;
+        background-color: rgb(236, 127, 55);
+    }
+
+    .text__number {
+        font-weight: bold;
+        font-family: "Signika Negative",
+            sans-serif;;
+        color: #8D4004;;
+        font-size: inherit;
+    }
+}

@@ -33,12 +33,13 @@
         <div class="item-price">{{course.price}}&#x20bd;</div>
         <hr class="linia">
         <div class="charac">
-          <p>Категория: Худи{{course.category}}</p>
+          <p>Категория: худи{{course.category}}</p>
           <p>Цвет: черный{{course.color}}</p>
         </div>
         <p class="item-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima voluptas maxime, molestiae voluptates
           voluptate at expedita nobis eveniet earum voluptatem itaque? Architecto nam recusandae omnis sapiente dolores
           optio cum at.{{course.desc}}</p>
+          <p class="size-text">(Размер)</p>
         <nav class="item-sizes">
           <a href="#" class="prod-sizes">
             XS
@@ -96,10 +97,15 @@
     const thumbnails = document.querySelectorAll('.product-thumbnail');
 
     thumbnails.forEach(thumbnail => {
-      thumbnail.addEventListener('click', () => {
-        mainImage.src = thumbnail.querySelector('img').src;
+        thumbnail.addEventListener('click', () => {
+          const newSrc = thumbnail.querySelector('img').src;
+          mainImage.style.opacity = 0;
+          setTimeout(() => {
+            mainImage.src = newSrc;
+            mainImage.style.opacity = 1;
+          }, 200);
+        });
       });
-    });
   </script>
 
 </div>
