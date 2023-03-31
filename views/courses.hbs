@@ -1,67 +1,15 @@
-{{!-- <h1>Вещи</h1>
 
-{{#if courses.length}}
-{{#each courses}}
-<div class="row">
-  <div class="col s6 offset-s3">
-    <div class="card">
-      <div class="card-image">
-        <img src="{{img}}" alt="{{title}}">
-      </div>
-      <div class="card-content">
-        <span class="card-title">{{title}}</span>
-        <p class="price">{{price}}</p>
-      </div>
-      <div class="card-action actions">
-        <a href="/courses/{{id}}" target="_blank">Открыть вещь</a>
-        {{#if @root.isAuth}}
-        <a href="/courses/{{id}}/edit?allow=true">Редактировать</a>
-        <form action="/card/add" method="POST">
-          <input type="hidden" name="_csrf" value="{{@root.csrf}}">
-          <input type="hidden" name="id" value="{{id}}">
-          <button type="submit" class="btn btn-primary">Купить</button>
-        </form>
-        {{/if}}
-      </div>
-    </div>
-  </div>
-</div>
-{{/each}}
-{{else}}
-<p>Курсов пока нет</p>
-{{/if}}
---}}
-<p class="category-name">Категория</p>
-{{!-- {{#if courses.length}}
-{{#each courses}}
-<div class="product-item">
-  <div class="product-item-content">
-    <div class="img-wrapper">
-      <a href="/courses/{{id}}"><img src="{{img}}" alt="{{title}}"></a>
-    </div>
-    <div class="product-info-wrap">
-      <div class="product-info">
-        <div class="product-name"><span class="card-title">{{title}}</span></div>
-        <div class="product-price">{{price}} &#x20bd;</div>
-      </div>
-      <div class="product-info-hover"></div>
-    </div>
-
-  </div>
-</div>
-{{/each}}
-{{/if}} --}}
-
+<p class="category-name"></p>
 
 <div class="products-grid">
   {{#if courses.length}}
   {{#each courses}}
   <div class="product">
     <div class="product-image">
-      <a href="/courses/{{id}}"><img src="{{img}}" alt="{{title}}">
+      <a href="/catalog/{{category}}/{{id}}"><img src="{{img}}" alt="{{title}}">
         <img
-          src="https://media2.symbol.ua/aio-images/2d/df/2ddf6132eed69aa3cad603524d21038a/d958d513-cb68-4f33-b082-631d9f22be20.jpg"
-          alt="Product 1" class="hover-image">
+          src="{{img2}}"
+          alt="hover-img" class="hover-image">
       </a>
     </div>
     <div class="product-info">
@@ -71,7 +19,7 @@
         <span class="product-price">{{price}} &#x20bd;</span>
       </div>
       {{#if @root.isAuth}}
-      <a href="/courses/{{id}}/edit?allow=true">Редактировать</a>
+      <a href="/catalog/{{id}}/edit?allow=true">Редактировать</a>
       {{/if}}
     </div>
   </div>

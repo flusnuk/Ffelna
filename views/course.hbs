@@ -1,29 +1,19 @@
-{{!-- <div class="item-solo">
-  <img src="{{course.img}}" alt="{{course.title}}">
-  <p class="item-name">{{course.title}}</h1>
-  <p class="price-item price big">{{course.price}}</p>
-</div> --}}
+
 <div class="item-solo">
   <div class="main-item">
     <div class="main-section">
       <div class="item-image">
-        <img id="main-image"
-          src="{{course.img}}"
-          alt="{{course.title}}">
+        <img id="main-image" src="{{course.img}}" alt="{{course.title}}">
       </div>
       <div class="product-thumbnails main-thumb">
         <div class="product-thumbnail">
-          <img
-            src="https://media2.symbol.ua/aio-images/2d/df/2ddf6132eed69aa3cad603524d21038a/d958d513-cb68-4f33-b082-631d9f22be20.jpg?_ga=2.70475792.1247935750.1677777963-558957583.1677603923&_gac=1.56972760.1677779728.Cj0KCQiA6fafBhC1ARIsAIJjL8kzn53X2J1Ly2RJ22o9sCXSaorPxUGvHoTmW9HURzV15zfckTIuOMUaAvh-EALw_wcB"
-            alt="VETEMENT   Jacket Thumbnail 1">
+          <img src="{{course.img2}}" alt="{{course.title}}">
         </div>
         <div class="product-thumbnail">
-          <img
-            src="https://media2.symbol.ua/aio-images/jn/ab/adab79889fca0a99a37eea1375cf2a40/e9923bf5-bc02-4240-bdcb-1ba20847eb04.jpg?_ga=2.70475792.1247935750.1677777963-558957583.1677603923&_gac=1.56972760.1677779728.Cj0KCQiA6fafBhC1ARIsAIJjL8kzn53X2J1Ly2RJ22o9sCXSaorPxUGvHoTmW9HURzV15zfckTIuOMUaAvh-EALw_wcB">
+          <img src="{{course.img3}}" alt="{{course.title}}">
         </div>
         <div class="product-thumbnail">
-          <img
-            src="https://media2.symbol.ua/aio-images/90/35/90350b9f0c46d98d58701b763cc275e3/7e1c3253-2d27-4305-b5b2-12afd8595b48.jpg?_ga=2.70475792.1247935750.1677777963-558957583.1677603923&_gac=1.56972760.1677779728.Cj0KCQiA6fafBhC1ARIsAIJjL8kzn53X2J1Ly2RJ22o9sCXSaorPxUGvHoTmW9HURzV15zfckTIuOMUaAvh-EALw_wcB">
+          <img src="{{course.img}}" alt="{{course.title}}">
         </div>
       </div>
     </div>
@@ -33,13 +23,11 @@
         <div class="item-price">{{course.price}}&#x20bd;</div>
         <hr class="linia">
         <div class="charac">
-          <p>Категория: худи{{course.category}}</p>
-          <p>Цвет: черный{{course.color}}</p>
+          <p>Категория: {{course.category}}</p>
+          <p>Цвет: {{course.color}}</p>
         </div>
-        <p class="item-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima voluptas maxime, molestiae voluptates
-          voluptate at expedita nobis eveniet earum voluptatem itaque? Architecto nam recusandae omnis sapiente dolores
-          optio cum at.{{course.desc}}</p>
-          <p class="size-text">(Размер)</p>
+        <p class="item-p">{{course.mainDesc}}</p>
+        <p class="size-text">(Размер)</p>
         <nav class="item-sizes">
           <a href="#" class="prod-sizes">
             XS
@@ -97,15 +85,14 @@
     const thumbnails = document.querySelectorAll('.product-thumbnail');
 
     thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', () => {
-          const newSrc = thumbnail.querySelector('img').src;
-          mainImage.style.opacity = 0;
-          setTimeout(() => {
-            mainImage.src = newSrc;
-            mainImage.style.opacity = 1;
-          }, 200);
-        });
+      thumbnail.addEventListener('click', () => {
+        const newSrc = thumbnail.querySelector('img').src;
+        mainImage.style.opacity = 0;
+        setTimeout(() => {
+          mainImage.src = newSrc;
+          mainImage.style.opacity = 1;
+        }, 200);
       });
+    });
   </script>
-
 </div>

@@ -1,28 +1,3 @@
-{{!-- <h1 class="addItem">Добавить Вещь</h1>
-
-<form action="/add" method="POST">
-  <div class="input-field">
-    <input id="title" name="title" type="text" class="validate" required>
-    <label for="title">Название вещи</label>
-    <span class="helper-text" data-error="Введите название"></span>
-  </div>
-
-  <div class="input-field">
-    <input id="price" name="price" type="number" class="validate" required min="1">
-    <label for="price">Цена вещи</label>
-    <span class="helper-text" data-error="Введите цену"></span>
-  </div>
-
-  <div class="input-field">
-    <input id="img" name="img" type="text" class="validate" required>
-    <label for="img">URL картинки</label>
-    <span class="helper-text" data-error="Введите url картинки"></span>
-  </div>
-
-  <input type="hidden" name="_csrf" value="{{csrf}}">
-
-  <button class="btn btn-primary">Добавить вещь</button>
-</form> --}}
 <div class="backg">
   <form action="/add" method="POST">
     <div class="contact__form">
@@ -31,23 +6,41 @@
         <input type="text" class="contact__inputs validate" name="title" id="title" placeholder="Enter item name*"
           required>
 
-        <select name="category" class="contact__inputs validate" id="category" name="user_profile_color_1" required>
-          <option value="1">Pants</option>
-          <option value="1">Hats</option>
-          <option value="1">Синий</option>
-          <option value="1">Синий</option>
+        <select name="category" class="contact__inputs validate" id="category" required>
+          <option value="hoodies">Hoodies</option>
+          <option value="anoraks">Anoraks</option>
+          <option value="pants">Pants</option>
+          <option value="sweatshirts">Sweatshirts</option>
+          <option value="t-shirts">T-shirts</option>
+          <option value="tops">Tops</option>
         </select>
 
         <input type="number" name="price" class="contact__inputs validate" id="price" placeholder="Enter price*"
           required min="1">
 
         <input type="text" name="img" class="contact__inputs validate" id="img" placeholder="Enter URL*" required>
+        <input type="text" name="img2" class="contact__inputs validate" id="img" placeholder="Enter URL*" required>
+        <input type="text" name="img3" class="contact__inputs validate" id="img" placeholder="Enter URL*" required>
 
-        <input type="text" name="color" class="contact__inputs validate" id="color" placeholder="Enter color*" required>
+        <select  type="text" name="color" class="contact__inputs validate" id="color" placeholder="Enter color*" required>
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="Black">Black</option>
+          <option value="Yellow">Yellow</option>
+          <option value="White">White</option>
+          <option value="Green">Green</option>
+        </select>
 
-        <input type="text" name="desc" class="contact__inputs validate" id="desc" placeholder="Enter desc*" required>
+        <input name="mainDesc" id="mainDesc" class="contact__inputs validate" placeholder="Enter main description" required>
+        
+        {{!-- <input type="text" name="desc" class="contact__inputs validate" id="desc" placeholder="Enter desc*" required> --}}
 
-        <input type="text" name="sizes" class="contact__inputs validate" id="sizes" placeholder="Enter sizes*" required>
+        {{!-- <input type="text" name="sizes" class="contact__inputs validate" id="sizes" placeholder="Enter sizes*" required> --}}
+       
+        <div class="inStock__div">
+          <input type="checkbox" id="inStock" name="inStock" value="louie">
+          <label for="louie">В наличии</label>
+        </div>
 
         <input type="hidden" name="_csrf" value="{{csrf}}">
         <button class="btn btn-primary contact__btn contact-btn-send">Добавить вещь</button>

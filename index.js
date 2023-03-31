@@ -47,10 +47,10 @@ app.use(userMiddleware)
 
 app.use('/', homeRoutes)
 app.use('/add', addRoutes)
-app.use('/courses', coursesRoutes)
 app.use('/card', cardRoutes)
 app.use('/orders', ordersRoutes)
 app.use('/auth', authRoutes)
+app.use('/catalog', coursesRoutes)
 
 async function start() {
   try {

@@ -5,20 +5,34 @@
     margin: 0 auto;
     max-width: 1000px;
 }
+.product{
+    max-width: 300px;
+}
 .img-hide {
     display: block;
+}
+
+.borders-cat {
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .gallery img {
     width: 100%;
     height: auto;
 }
+
 @media (max-width: 768px) {
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 5px;
     }
-     .img-hide{
+
+    .img-hide {
         display: none;
-     }
+    }
+
+    .borders-cat {
+        margin: 0px;
+    }
 }
