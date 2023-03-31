@@ -1,32 +1,58 @@
-<h1>Редактировать {{course.title}}</h1>
+<div class="edit-course">
+  <div>
+    <h3>Редактировать {{course.title}}</h3>
 
-<form action="/courses/edit" method="POST" class="course-form">
-  <div class="input-field">
-    <input id="title" name="title" type="text" class="validate" required value="{{course.title}}">
-    <label for="title">Название вещи</label>
-    <span class="helper-text" data-error="Введите название"></span>
+    <form action="/courses/edit" method="POST" class="course-form">
+      <div class="input-field">
+        <input id="title" name="title" type="text" class="validate" required value="{{course.title}}">
+        <label for="title">Название вещи</label>
+        <span class="helper-text" data-error="Введите название"></span>
+      </div>
+
+      <div class="input-field">
+        <input id="price" name="price" type="number" class="validate" required min="1" value="{{course.price}}">
+        <label for="price">Цена вещи</label>
+        <span class="helper-text" data-error="Введите цену"></span>
+      </div>
+
+      <div class="input-field">
+        <input id="img" name="img" type="text" class="validate" required value="{{course.img}}">
+        <label for="img">URL картинки</label>
+        <span class="helper-text" data-error="Введите url картинки"></span>
+      </div>
+
+
+      <div class="input-field">
+        <input id="color" name="color" type="text" class="validate" required min="1" value="{{course.color}}">
+        <label for="desc">Цвет вещи</label>
+        <span class="helper-text" data-error="Введите цвет"></span>
+      </div>
+
+      <div class="input-field">
+        <input id="desc" name="desc" type="text" class="validate" required min="1" value="{{course.desc}}">
+        <label for="desc">Описание вещи</label>
+        <span class="helper-text" data-error="Введите описание"></span>
+      </div>
+
+      <div class="input-field">
+        <input id="sizes" name="sizes" type="text" class="validate" required min="1" value="{{course.sizes}}">
+        <label for="sizes">Розмер вещи</label>
+        <span class="helper-text" data-error="Введите розмера"></span>
+      </div>
+
+
+      <input type="hidden" name="id" value="{{course.id}}">
+      <input type="hidden" name="_csrf" value="{{csrf}}">
+      <button type="submit" class="btn btn-primary">Редактировать вещь</button>
+    </form>
+
+    <form action="/courses/remove" method="POST">
+      <input type="hidden" name="_csrf" value="{{csrf}}">
+      <input type="hidden" name="id" value="{{ course.id }}">
+      <button class="btn red">Удалить вещь</button>
+    </form>
   </div>
-
-  <div class="input-field">
-    <input id="price" name="price" type="number" class="validate" required min="1"  value="{{course.price}}">
-    <label for="price">Цена вещи</label>
-    <span class="helper-text" data-error="Введите цену"></span>
+  <div>
+    <img class="edit-img" src="{{course.img}}" alt="">
   </div>
-
-  <div class="input-field">
-    <input id="img" name="img" type="text" class="validate" required  value="{{course.img}}">
-    <label for="img">URL картинки</label>
-    <span class="helper-text" data-error="Введите url картинки"></span>
-  </div>
-
-  <input type="hidden" name="id" value="{{course.id}}">
-  <input type="hidden" name="_csrf" value="{{csrf}}">
-
-  <button type="submit" class="btn btn-primary">Редактировать вещь</button>
-</form>
-
-<form action="/courses/remove" method="POST">
-  <input type="hidden" name="_csrf" value="{{csrf}}">
-  <input type="hidden" name="id" value="{{ course.id }}">
-  <button class="btn red">Удалить вещь</button>
-</form>
+</div>

@@ -56,14 +56,13 @@
           <span></span>
         </div>
         <div class="nav__logo-container">
-          <a href="/"><img
-              src="https://kept.com.ua/thumb/Mla/Republic Designs Y2K Logo.png" /></a>
+          <a href="/"><img src="https://kept.com.ua/thumb/1Ebo/Republic Designs Y2K Logo.png"/>
           {{!-- <a href="/"><img src="https://ostriv.ua/skin/frontend/os/default/images/ostriv_v2.svg" alt="logo"></a> --}}
         </div>
         <div class="links__container burger__links">
           <div class="header__text-links">
             {{#if isHome}}
-            <li class="active"><a href="/">Главная</a></li>
+            <li class="active"><a href="/">Главная </a></li>
             {{else}}
             <li><a href="/">Главная</a></li>
             {{/if}}
@@ -83,9 +82,10 @@
             <li><a href="/auth/logout">Выйти</a></li>
             {{else}}
             {{#if isLogin}}
-            <li class="active"><a href="/auth/login#login">Войти</a></li>
+            {{!-- style="display:NONE" --}}
+            <li class="active" ><a href="/auth/login#login">Войти</a></li>
             {{else}}
-            <li><a href="/auth/login#login">Войти</a></li>
+            <li ><a href="/auth/login#login">Войти</a></li>
             {{/if}}
             {{/if}}
         </div>

@@ -20,6 +20,9 @@
     border-color: #191919;
 }
 
+.backg{
+    background-color: #e7e7e7;
+}
 .contact__btn {
     width: 85%;
     height: 40px;
@@ -37,7 +40,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    padding: 50px 0px 50px 0px;
+
    
 }
 

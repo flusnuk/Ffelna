@@ -1,0 +1,14 @@
+.edit-course{
+    max-width: 900px;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+}
+.edit-img{
+    max-width: 70%;
+}
+.edit-course button{
+    padding: 5px;
+}
+
