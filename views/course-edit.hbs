@@ -4,32 +4,33 @@
 
     <form action="/catalog/edit" method="POST" class="course-form">
       <div class="input-field">
-        <input id="title" name="title" type="text" class="validate" required value="{{course.title}}">
+        <input id="title" name="title" type="text" class="edit-input validate" required value="{{course.title}}">
         <label for="title">Название вещи</label>
         <span class="helper-text" data-error="Введите название"></span>
       </div>
 
       <div class="input-field">
-        <input id="price" name="price" type="number" class="validate" required min="1" value="{{course.price}}">
+        <input id="price" name="price" type="number" class="edit-input validate" required min="1"
+          value="{{course.price}}">
         <label for="price">Цена вещи</label>
         <span class="helper-text" data-error="Введите цену"></span>
       </div>
 
 
       <div class="input-field">
-        <input id="img" name="img" type="text" class="validate" required value="{{course.img}}">
+        <input id="img" name="img" type="text" class="edit-input validate" required value="{{course.img}}">
         <label for="img">URL картинки</label>
         <span class="helper-text" data-error="Введите url картинки"></span>
       </div>
 
       <div class="input-field">
-        <input id="img2" name="img2" type="text" class="validate" required value="{{course.img2}}">
+        <input id="img2" name="img2" type="text" class="edit-input validate" required value="{{course.img2}}">
         <label for="img2">URL картинки</label>
         <span class="helper-text" data-error="Введите url картинки"></span>
       </div>
 
       <div class="input-field">
-        <input id="img3" name="img3" type="text" class="validate" required value="{{course.img3}}">
+        <input id="img3" name="img3" type="text" class="edit-input validate" required value="{{course.img3}}">
         <label for="img3">URL картинки</label>
         <span class="helper-text" data-error="Введите url картинки"></span>
       </div>
@@ -54,7 +55,7 @@
         <span class="helper-text" data-error="Введите розмера"></span>
       </div> --}}
 
-      <select name="category" class="contact__inputs validate" id="category" required>
+      <select name="category" class="edit-input validate" id="category" required>
         <option value="hoodies">Hoodies</option>
         <option value="anoraks">Anoraks</option>
         <option value="pants">Pants</option>
@@ -62,26 +63,30 @@
         <option value="t-shirts">T-shirts</option>
         <option value="tops">Tops</option>
       </select>
+      <label for="category">Категория</label>
 
-      <select type="text" name="color" class="contact__inputs validate" id="color" placeholder="Enter color*" required>
+      <select type="text" name="color" class="edit-input validate" id="color" placeholder="Enter color*" required>
         <option value="Red">Red</option>
         <option value="Blue">Blue</option>
         <option value="Black">Black</option>
         <option value="Yellow">Yellow</option>
         <option value="White">White</option>
         <option value="Green">Green</option>
-        
       </select>
+      <label for="color">Цвет товара</label>
 
-      <input name="mainDesc" id="mainDesc" placeholder="Enter main description "
-        value="{{course.mainDesc}}" required>
+      <div class="input-field">
+        <input name="mainDesc" class="edit-input validate" id="mainDesc" placeholder="Enter main description*"
+          value="{{course.mainDesc}}" required>
+        <label for="mainDesc">Описание товара</label>
+        <span class="helper-text" data-error="Введите description"></span>
 
+      </div>
       <input type="hidden" name="id" value="{{course.id}}">
       <input type="hidden" name="_csrf" value="{{csrf}}">
       <button type="submit" class="btn btn-primary">Редактировать вещь</button>
 
     </form>
-
     <form action="/catalog/remove" method="POST">
       <input type="hidden" name="_csrf" value="{{csrf}}">
       <input type="hidden" name="id" value="{{ course.id }}">

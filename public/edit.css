@@ -1,13 +1,30 @@
 .edit-course {
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
     padding-top: 20px;
     padding-left: 10px;
     display: flex;
+    flex-direction: column-reverse;
+}
+
+.edit-course h3 {
+    padding-bottom: 5px;
+}
+
+.edit-course select {
+    height: 40px;
 }
 
 .edit-img {
     max-width: 70%;
+    padding-left: 30px;
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.edit-input {
+    width: 250px;
 }
 
 .edit-course button {
@@ -18,4 +35,11 @@
     margin: 15px 0px 0px 15px;
     font-family: var(--font-family);
     font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .edit-course {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }

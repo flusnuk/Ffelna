@@ -107,7 +107,7 @@
 .item-title {
     font-size: 1.5rem;
     margin: 0 0 20px 0;
-    color: #696e7c;
+    color: black;
     font-family: 'Anton', sans-serif;
 }
 
@@ -303,3 +303,8 @@ select:focus {
         padding-left: 30px;
     }
 }
+
+
+
+
+
