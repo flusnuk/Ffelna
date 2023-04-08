@@ -1,0 +1,84 @@
+.contact-us {
+    background-color: #252524;
+}
+
+.contact-heldiv {
+    max-width: 1000px;
+    display: block;
+    margin: auto;
+}
+
+.contact-h1 {
+    text-align: center;
+    color: white;
+    font-family: Roboto,
+        sans-serif;
+    font-size: 1.8rem;
+    padding: 50px 0px 30px 0px;
+}
+
+.contact-or {
+    background-color: #fdb467;
+    width: 100px;
+    height: 5px;
+    margin: auto;
+    border: #fdb467 1px solid;
+    border-radius: 5px;
+
+}
+
+.contact-p {
+    color: white;
+    font-family: Roboto,
+        sans-serif;
+    font-size: 1.2rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    line-height: 150%;
+    padding: 35px 5px 50px 5px;
+    text-align: center;
+}
+
+.contact-div-inp {
+    flex-direction: column;
+    max-width: 700px;
+    margin-left: 30px;
+    padding-bottom: 50px;
+}
+
+.contact-div-inp input {
+    background-color: #252524;
+    border: gray solid 1.5px;
+    border-radius: 3px;
+    font-weight: 800;
+    padding: 8px;
+}
+
+.contact-div-inp button {
+    font-size: 0.875rem;
+    font-weight: 700;
+    background-color: #fdb467;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 14px;
+    width: 140px;
+}
+
+@media (min-width:430px) {
+    .contact-div-inp button {
+        width: 150px;
+    }
+
+    .contact-div-inp input {
+        width: 300px;
+        margin-right: 10px;
+    }
+
+    .contact-div-inp {
+        max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 80px;
+        flex-direction: inherit;
+    }
+}
