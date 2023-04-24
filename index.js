@@ -16,17 +16,14 @@ const varMiddleware = require('./middleware/variables')
 const userMiddleware = require('./middleware/user')
 
 const MONGODB_URI = 'mongodb+srv://ypk:45624562@cluster0.ooqx3av.mongodb.net/shop'
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 5000
 
 const app = express()
 const hbs = exphbs.create({
   defaultLayout: 'main',
   extname: 'hbs'
 })
-const store = new MongoStore({
-  collection: 'sessions',
-  uri: MONGODB_URI
-})
+
 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
@@ -37,8 +34,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(session({
   secret: 'some secret value',
   resave: false,
-  saveUninitialized: false,
-  store
+  saveUninitialized: false
 }))
 app.use(csrf())
 app.use(flash())
