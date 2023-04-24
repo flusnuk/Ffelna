@@ -80,11 +80,33 @@
           value="{{course.mainDesc}}" required>
         <label for="mainDesc">Описание товара</label>
         <span class="helper-text" data-error="Введите description"></span>
-
       </div>
+
+      <div class="input-field">
+        <input name="property" class="edit-input validate" id="property" placeholder="Enter property*"
+          value="{{course.property}}" required>
+        <label for="property">Характеристики товара</label>
+        <span class="helper-text" data-error="Введите property"></span>
+      </div>
+      <div class="input-field">
+        <input name="desc" class="edit-input validate" id="desc" placeholder="Enter desc*" value="{{course.desc}}"
+          required>
+        <label for="property">Описание товара (2)</label>
+        <span class="helper-text" data-error="Введите desc"></span>
+      </div>
+
+      <div class="input-field">
+        <input name="sizes" class="edit-input validate" id="sizes" placeholder="Enter sizes*" value="{{course.sizes}}">
+        <label for="sizes">Розмера товара (2)</label>
+        <span class="helper-text" data-error="Введите sizes"></span>
+      </div>
+
+
+
       <input type="hidden" name="id" value="{{course.id}}">
       <input type="hidden" name="_csrf" value="{{csrf}}">
       <button type="submit" class="btn btn-primary">Редактировать вещь</button>
+
 
     </form>
     <form action="/catalog/remove" method="POST">

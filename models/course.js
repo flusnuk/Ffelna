@@ -14,6 +14,9 @@ const courseSchema = new Schema({
   img3: String,
   color: String,
   mainDesc: String,
+  desc: String,
+  sizes: String,
+  property: String,
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'User'
