@@ -55,10 +55,12 @@ router.get('/:categoryname', async (req, res) => {
 router.get('/:category/:id', async (req, res) => {
 
   const course = await Course.findById(req.params.id)
+  const sizeArr = await course.sizes.split("/")
   res.render('course', {
     layout: 'empty',
     title: `${course.title}`,
-    course
+    course,
+    sizeArr
   })
 })
 

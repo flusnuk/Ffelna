@@ -32,14 +32,11 @@
         <p class="item-p">{{course.mainDesc}}</p>
         <p class="size-text">(Размер)</p>
         <nav class="item-sizes">
+          {{#each sizeArr}}
           <a href="#" class="prod-sizes">
-            XS
-          </a><a href="#" class="prod-sizes">
-            S
+            {{this}}
           </a>
-          <a href="#" class="prod-sizes">
-            XL
-          </a>
+          {{/each}}
         </nav>
 
       </div>
