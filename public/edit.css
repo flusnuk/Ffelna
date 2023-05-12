@@ -6,7 +6,9 @@
     display: flex;
     flex-direction: column-reverse;
 }
-
+.InStock-edit{
+    font-weight: 700;
+}
 .edit-course h3 {
     padding-bottom: 5px;
 }
