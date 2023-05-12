@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Righteous&display=swap');
+
 .item-sizes {
     background-color: #e7e7e7 !important;
 }
@@ -97,13 +98,15 @@
     justify-content: space-around;
 
 }
-.size-text{
+
+.size-text {
     color: #52505098;
     font-weight: 600;
     /* text-align: center; */
     font-size: 1rem;
     padding-bottom: 8px;
 }
+
 .item-title {
     font-size: 1.5rem;
     margin: 0 0 20px 0;
@@ -118,7 +121,17 @@
     font-family: 'Righteous', cursive;
 }
 
-.product-add-to-cart {
+.product-inStock {
+    font-size: 1.4rem;
+    padding: 16px;
+    max-width: 300px;
+    background-color: #1c1c1b;
+    color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+
+.product-out-of-Stock {
     font-size: 1.4rem;
     padding: 16px;
     max-width: 300px;
@@ -303,8 +316,3 @@ select:focus {
         padding-left: 30px;
     }
 }
-
-
-
-
-

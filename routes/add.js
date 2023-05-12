@@ -23,6 +23,7 @@ router.post('/', auth, async (req, res) => {
     property: req.body.property,
     sizes: req.body.sizes,
     category: req.body.category,
+    inStock: req.body.inStock,
     userId: req.user
   })
 

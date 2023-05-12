@@ -40,10 +40,15 @@
         </nav>
 
       </div>
+      {{#if course.inStock}}
       <div class="btn-div">
-
-        <button class="product-add-to-cart">В наличии</button>
+        <button class="product-inStock">В наличии</button>
       </div>
+      {{else}}
+      <div class="btn-div">
+        <button class="product-out-of-Stock">Не в наличии</button>
+      </div>
+      {{/if}}
     </div>
   </div>
 

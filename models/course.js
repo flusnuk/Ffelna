@@ -17,6 +17,7 @@ const courseSchema = new Schema({
   desc: String,
   sizes: String,
   property: String,
+  inStock: Boolean,
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'User'
