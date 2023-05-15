@@ -1,36 +1,36 @@
 <div class="edit-course">
   <div>
-    <h3>Редактировать {{course.title}}</h3>
+    <h3>Редактировать {{item.title}}</h3>
 
     <form action="/catalog/edit" method="POST" class="course-form">
       <div class="input-field">
-        <input id="title" name="title" type="text" class="edit-input validate" required value="{{course.title}}">
+        <input id="title" name="title" type="text" class="edit-input validate" required value="{{item.title}}">
         <label for="title">Название вещи</label>
         <span class="helper-text" data-error="Введите название"></span>
       </div>
 
       <div class="input-field">
         <input id="price" name="price" type="number" class="edit-input validate" required min="1"
-          value="{{course.price}}">
+          value="{{item.price}}">
         <label for="price">Цена вещи</label>
         <span class="helper-text" data-error="Введите цену"></span>
       </div>
 
 
       <div class="input-field">
-        <input id="img" name="img" type="text" class="edit-input validate" required value="{{course.img}}">
+        <input id="img" name="img" type="text" class="edit-input validate" required value="{{item.img}}">
         <label for="img">URL картинки</label>
         <span class="helper-text" data-error="Введите url картинки"></span>
       </div>
 
       <div class="input-field">
-        <input id="img2" name="img2" type="text" class="edit-input validate" required value="{{course.img2}}">
+        <input id="img2" name="img2" type="text" class="edit-input validate" required value="{{item.img2}}">
         <label for="img2">URL картинки</label>
         <span class="helper-text" data-error="Введите url картинки"></span>
       </div>
 
       <div class="input-field">
-        <input id="img3" name="img3" type="text" class="edit-input validate" required value="{{course.img3}}">
+        <input id="img3" name="img3" type="text" class="edit-input validate" required value="{{item.img3}}">
         <label for="img3">URL картинки</label>
         <span class="helper-text" data-error="Введите url картинки"></span>
       </div>
@@ -74,29 +74,28 @@
         <option value="Green">Green</option>
       </select>
       <label for="color">Цвет товара</label>
-
       <div class="input-field">
         <input name="mainDesc" class="edit-input validate" id="mainDesc" placeholder="Enter main description*"
-          value="{{course.mainDesc}}" required>
+          value="{{item.mainDesc}}" required>
         <label for="mainDesc">Описание товара</label>
         <span class="helper-text" data-error="Введите description"></span>
       </div>
 
       <div class="input-field">
         <input name="property" class="edit-input validate" id="property" placeholder="Enter property*"
-          value="{{course.property}}" required>
+          value="{{item.property}}" required>
         <label for="property">Характеристики товара</label>
         <span class="helper-text" data-error="Введите property"></span>
       </div>
       <div class="input-field">
-        <input name="desc" class="edit-input validate" id="desc" placeholder="Enter desc*" value="{{course.desc}}"
+        <input name="desc" class="edit-input validate" id="desc" placeholder="Enter desc*" value="{{item.desc}}"
           required>
         <label for="property">Описание товара (2)</label>
         <span class="helper-text" data-error="Введите desc"></span>
       </div>
 
       <div class="input-field">
-        <input name="sizes" class="edit-input validate" id="sizes" placeholder="Enter sizes*" value="{{course.sizes}}">
+        <input name="sizes" class="edit-input validate" id="sizes" placeholder="Enter sizes*" value="{{item.sizes}}">
         <label for="sizes">Розмера товара (2)</label>
         <span class="helper-text" data-error="Введите sizes"></span>
       </div>
@@ -106,7 +105,7 @@
       </div>
 
 
-      <input type="hidden" name="id" value="{{course.id}}">
+      <input type="hidden" name="id" value="{{item.id}}">
       <input type="hidden" name="_csrf" value="{{csrf}}">
       <button type="submit" class="btn btn-primary">Редактировать вещь</button>
 
@@ -114,11 +113,11 @@
     </form>
     <form action="/catalog/remove" method="POST">
       <input type="hidden" name="_csrf" value="{{csrf}}">
-      <input type="hidden" name="id" value="{{ course.id }}">
+      <input type="hidden" name="id" value="{{ item.id }}">
       <button class="btn red">Удалить вещь</button>
     </form>
   </div>
   <div>
-    <img class="edit-img" src="{{course.img}}" alt="">
+    <img class="edit-img" src="{{item.img}}" alt="">
   </div>
 </div>

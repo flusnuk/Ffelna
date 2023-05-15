@@ -1,8 +1,8 @@
 
-<p class="category-name" id="headName">{{courses.catalog}}</p>
+<p class="category-name" id="headName">{{items.catalog}}</p>
 <div class="products-grid">
-  {{#if courses.length}}
-  {{#each courses}}
+  {{#if items.length}}
+  {{#each items}}
   <div class="product">
     <div class="product-image">
       <a href="/catalog/{{category}}/{{id}}"><img src="{{img}}" alt="{{title}}">

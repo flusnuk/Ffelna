@@ -21,7 +21,7 @@
             <li><a href="/">Главная</a></li>
             {{/if}}
             
-            {{#if isCourses}}
+            {{#if isItems}}
             <li class="active"><a href="/catalog">Категории</a></li>
             {{else}}
             <li><a href="/catalog">Категории</a></li>
@@ -37,7 +37,7 @@
             {{else}}
             {{#if isLogin}}
             {{!-- style="display:NONE" --}}
-            <li class="active" ><a href="/auth/login#login">Войти</a></li>
+            <li class="active"><a href="/auth/login#login">Войти</a></li>
             {{else}}
             <li ><a href="/auth/login#login">Войти</a></li>
             {{/if}}

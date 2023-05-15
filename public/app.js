@@ -38,8 +38,8 @@ if ($card) {
         },
       }).then(res => res.json())
         .then(card => {
-          if (card.courses.length) {
-            const html = card.courses.map(c => {
+          if (card.items.length) {
+            const html = card.items.map(c => {
               return `
               <tr>
                 <td>${c.title}</td>

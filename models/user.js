@@ -18,9 +18,9 @@ const userSchema = new Schema({
           required: true,
           default: 1
         },
-        courseId: {
+        itemId: {
           type: Schema.Types.ObjectId,
-          ref: 'Course',
+          ref: 'Item',
           required: true
         }
       }
@@ -29,17 +29,17 @@ const userSchema = new Schema({
 })
 
 
-userSchema.methods.addToCart = function(course) {
+userSchema.methods.addToCart = function (item) {
   const items = [...this.cart.items]
   const idx = items.findIndex(c => {
-    return c.courseId.toString() === course._id.toString()
+    return c.itemId.toString() === item._id.toString()
   })
 
   if (idx >= 0) {
     items[idx].count = items[idx].count + 1
   } else {
     items.push({
-      courseId: course._id,
+      itemId: item._id,
       count: 1
     })
   }
@@ -51,10 +51,10 @@ userSchema.methods.addToCart = function(course) {
 
 userSchema.methods.removeFromCart = function(id) {
   let items = [...this.cart.items]
-  const idx = items.findIndex(c => c.courseId.toString() === id.toString())
+  const idx = items.findIndex(c => c.itemId.toString() === id.toString())
 
   if (items[idx].count === 1) {
-    items = items.filter(c => c.courseId.toString() !== id.toString())
+    items = items.filter(c => c.itemId.toString() !== id.toString())
   } else {
     items[idx].count--
   }

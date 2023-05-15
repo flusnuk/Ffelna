@@ -10,7 +10,7 @@ const homeRoutes = require('./routes/home')
 const cardRoutes = require('./routes/card')
 const addRoutes = require('./routes/add')
 const ordersRoutes = require('./routes/orders')
-const coursesRoutes = require('./routes/courses')
+const itemsRoutes = require('./routes/items')
 const authRoutes = require('./routes/auth')
 const varMiddleware = require('./middleware/variables')
 const userMiddleware = require('./middleware/user')
@@ -46,7 +46,7 @@ app.use('/add', addRoutes)
 app.use('/card', cardRoutes)
 app.use('/orders', ordersRoutes)
 app.use('/auth', authRoutes)
-app.use('/catalog', coursesRoutes)
+app.use('/catalog', itemsRoutes)
 
 async function start() {
   try {

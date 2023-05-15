@@ -26,12 +26,12 @@ const itemSchema = new Schema({
 })
 
 itemSchema.method('toClient', function() {
-  const course = this.toObject()
+  const item = this.toObject()
 
-  course.id = course._id
-  delete course._id
+  item.id = item._id
+  delete item._id
 
-  return course
+  return item
 })
 
-module.exports = model('Course', itemSchema)
+module.exports = model('Item', itemSchema)

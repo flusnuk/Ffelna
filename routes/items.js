@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const Course = require('../models/course')
+const Item = require('../models/item')
 const auth = require('../middleware/auth')
 const router = Router()
 
@@ -14,24 +14,26 @@ router.get('/:id/edit', auth, async (req, res) => {
     return res.redirect('/')
   }
 
-  const course = await Course.findById(req.params.id)
+  const item = await Item.findById(req.params.id)
 
-  res.render('course-edit', {
-    title: `Редактировать ${course.title}`,
-    course
+
+  res.render('item-edit', {
+    title: `Редактировать ${item.title}`,
+    item
   })
 })
 
 router.post('/edit', auth, async (req, res) => {
   const { id } = req.body
   delete req.body.id
-  await Course.findByIdAndUpdate(id, req.body)
+
+  await Item.findByIdAndUpdate(id, req.body)
   res.redirect('/catalog')
 })
 
 router.post('/remove', auth, async (req, res) => {
   try {
-    await Course.deleteOne({ _id: req.body.id })
+    await Item.deleteOne({ _id: req.body.id })
     res.redirect('/catalog')
   } catch (e) {
     console.log(e)
@@ -40,26 +42,24 @@ router.post('/remove', auth, async (req, res) => {
 
 router.get('/:categoryname', async (req, res) => {
 
-  const courses = await Course.find({ category: req.params.categoryname })
+  const items = await Item.find({ category: req.params.categoryname })
     .populate('userId', 'email name')
-    .select('price title img img2 img3 mainDesc category')
- //   let courses2 = await courses.find(element => element.category == req.params.category);
+    .select('price title img img2 img3 mainDesc category sizes')
 
-  res.render('courses', {
+  res.render('items', {
     title: req.params.categoryname,
-    isCourses: true,
-    courses
+    isItems: true,
+    items
   })
 })
 
 router.get('/:category/:id', async (req, res) => {
-
-  const course = await Course.findById(req.params.id)
-  const sizeArr = await course.sizes.split("/")
-  res.render('course', {
+ const item = await Item.findById(req.params.id)
+  const sizeArr = await item.sizes.split("/")
+  res.render('item', {
     layout: 'empty',
-    title: `${course.title}`,
-    course,
+    title: `${item.title}`,
+    item,
     sizeArr
   })
 })

@@ -13,9 +13,9 @@
             <p><em>{{user.userId.name}}</em> ({{user.userId.email}})</p>
 
             <ol>
-              {{#each courses}}
+              {{#each items}}
                 <li>
-                  {{course.title}} (x<strong>{{count}}</strong>)
+                  {{item.title}} (x<strong>{{count}}</strong>)
                 </li>
               {{/each}}
             </ol>

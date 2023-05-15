@@ -2,17 +2,17 @@
   <div class="main-item">
     <div class="main-section">
       <div class="item-image">
-        <img id="main-image" src="{{course.img}}" alt="{{course.title}}">
+        <img id="main-image" src="{{item.img}}" alt="{{item.title}}">
       </div>
       <div class="product-thumbnails main-thumb">
         <div class="product-thumbnail">
-          <img src="{{course.img2}}" alt="{{course.title}}">
+          <img src="{{item.img2}}" alt="{{item.title}}">
         </div>
         <div class="product-thumbnail">
-          <img src="{{course.img3}}" alt="{{course.title}}">
+          <img src="{{item.img3}}" alt="{{item.title}}">
         </div>
         <div class="product-thumbnail">
-          <img src="{{course.img}}" alt="{{course.title}}">
+          <img src="{{item.img}}" alt="{{item.title}}">
         </div>
       </div>
     </div>
@@ -22,14 +22,14 @@
 
     <div class="item-details">
       <div class="det-div">
-        <h1 class="item-title">{{course.title}}</h1>
-        <div class="item-price">{{course.price}}&#x20bd;</div>
+        <h1 class="item-title">{{item.title}}</h1>
+        <div class="item-price">{{item.price}}&#x20bd;</div>
         <hr class="linia">
         <div class="charac">
-          <p>Категория: {{course.category}}</p>
-          <p>Цвет: {{course.color}}</p>
+          <p>Категория: {{item.category}}</p>
+          <p>Цвет: {{item.color}}</p>
         </div>
-        <p class="item-p">{{course.mainDesc}}</p>
+        <p class="item-p">{{item.mainDesc}}</p>
         <p class="size-text">(Размер)</p>
         <nav class="item-sizes">
           {{#each sizeArr}}
@@ -40,7 +40,7 @@
         </nav>
 
       </div>
-      {{#if course.inStock}}
+      {{#if item.inStock}}
       <div class="btn-div">
         <button class="product-inStock">В наличии</button>
       </div>
@@ -59,7 +59,7 @@
       <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
       <div>
         <h4>Описание</h4>
-        <p>{{course.desc}}</p>
+        <p>{{item.desc}}</p>
       </div>
     </div>
     <div class="tab-2">
@@ -67,7 +67,7 @@
       <input id="tab2-2" name="tabs-two" type="radio">
       <div>
         <h4>Характеристики</h4>
-        <p>{{course.property}}</p>
+        <p>{{item.property}}</p>
       </div>
     </div>
   </div>

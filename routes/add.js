@@ -1,5 +1,5 @@
 const {Router} = require('express')
-const Course = require('../models/course')
+const Item = require('../models/item')
 const auth = require('../middleware/auth')
 const router = Router()
 
@@ -11,7 +11,7 @@ router.get('/', auth, (req, res) => {
 })
 
 router.post('/', auth, async (req, res) => {
-  const course = new Course({
+  const item = new Item({
     title: req.body.title,
     price: req.body.price,
     img: req.body.img,
@@ -28,7 +28,7 @@ router.post('/', auth, async (req, res) => {
   })
 
   try {
-    await course.save()
+    await item.save()
     res.redirect('/catalog')
   } catch (e) {
     console.log(e)
