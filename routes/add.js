@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/', auth, (req, res) => {
   res.render('add', {
-    title: 'Добавить курс',
+    title: 'Добавить вещь',
     isAdd: true
   })
 })
