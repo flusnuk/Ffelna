@@ -26,7 +26,9 @@ router.get('/:id/edit', auth, async (req, res) => {
 router.post('/edit', auth, async (req, res) => {
   const { id } = req.body
   delete req.body.id
-
+  if (typeof req.body.inStock === 'undefined' ) {
+    req.body.inStock = false;
+  }
   await Item.findByIdAndUpdate(id, req.body)
   res.redirect('/catalog')
 })
