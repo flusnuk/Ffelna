@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Righteous&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 .item-sizes {
     background-color: #e7e7e7 !important;
 }
@@ -10,7 +9,7 @@
 }
 
 .main-item {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
     padding: 15px;
     padding-bottom: 30px;
     flex-direction: column
@@ -111,14 +110,14 @@
     font-size: 1.5rem;
     margin: 0 0 20px 0;
     color: black;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .item-price {
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 20px;
-    font-family: 'Righteous', cursive;
+    font-family: 'Oswald', sans-serif;
 }
 
 .product-inStock {
@@ -149,8 +148,7 @@
     border: 1px black solid;
     -webkit-tap-highlight-color: transparent;
     font-weight: 700;
-    font-family: "Proxima Nova Regular",
-        sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-decoration: none;
     font-size: 16px;
     text-align: center;
@@ -174,7 +172,7 @@
 
 .tabs {
     color: gray;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.01em;
